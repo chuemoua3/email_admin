@@ -21,7 +21,7 @@ public class Email {
         this.password = randomPassword(defaultPassLength);
         System.out.println("Your password: " + password);
 
-        email = firstName.toLowerCase() + " " + lastName.toLowerCase() + "@" + department + "." + companySuffix;
+        email = firstName.toLowerCase() + lastName.toLowerCase() + "@" + department + "." + companySuffix;
     }
 
     public String getFirstName(){
@@ -54,7 +54,8 @@ public class Email {
 
     //method to ask for department
     public String setDepartment(){
-        System.out.println("New Worker: " + firstName + " Department Codes:  \n1for Sales \n2 for Development \n3 for Accounting \nEnter the department code: ");
+        System.out.println("New Worker: " + firstName + 
+        " Department Codes:  \n1for Sales \n2 for Development \n3 for Accounting \nEnter the department code: ");
         Scanner input = new Scanner(System.in);
         int choice = input.nextInt();
         input.close();
